@@ -6,4 +6,3 @@ const allowedOrigin = [
 ];
 
 module.exports = allowedOrigin;
-cd ..allowedOrigin
