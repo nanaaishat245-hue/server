@@ -4,9 +4,9 @@ const { addToCart, removeFromCart, clearCart, getUserCart } = require("../contro
 const router = express.Router()
 
 
-router.post("/addToCart", addToCart),   
-router.delete("/removeFromCart", removeFromCart),
-router.delete("/clearCart", clearCart)
+router.post("/addToCart", protect, addToCart),   
+router.delete("/removeFromCart", protect, removeFromCart),
+router.delete("/clearCart", protect, clearCart)
 router.get("/getUserCart", protect, getUserCart)
 
 module.exports = router;
